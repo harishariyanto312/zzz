@@ -1,0 +1,11 @@
+# Avoid iFrames from different origins
+add_header X-Frame-Options SAMEORIGIN;
+
+# Avoid MIME type sniff
+add_header X-Content-Type-Options nosniff;
+
+# Avoid XSS attacks
+add_header X-XSS-Protection "1; mode=block";
+
+# Referrer policy, only full path on same origin
+add_header Referrer-Policy "strict-origin-when-cross-origin";
